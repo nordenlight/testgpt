@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opsucht Auktionshaus</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Opsucht Minecraft</p>
+        <h1>Aktives Auktionshaus</h1>
+        <p class="subhead">
+          Live-Übersicht aller aktiven Auktionen inklusive Preis, Item-Details und aufgelösten
+          Spielernamen.
+        </p>
+        <div class="hero-actions">
+          <div class="search">
+            <input
+              id="search"
+              type="search"
+              placeholder="Nach Item, Spieler, Preis filtern …"
+              autocomplete="off"
+            />
+          </div>
+          <button id="refresh" class="primary">Aktualisieren</button>
+        </div>
+        <div class="meta">
+          <span id="last-updated">Letztes Update: –</span>
+          <span id="auction-count">0 Auktionen</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="status" id="status"></section>
+      <section class="grid" id="auction-grid"></section>
+    </main>
+
+    <footer>
+      <p>
+        UUID-Auflösung via Mojang API. Datenquelle:
+        <a href="https://api.opsucht.net/auctions/active" target="_blank" rel="noreferrer">Opsucht</a>.
+      </p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
